@@ -10,6 +10,7 @@ class UseCast {
             System.out.println(i + " / 3 with fractions: "
                     + (double) i / 3);
             System.out.println();
+
         }
     }
 }

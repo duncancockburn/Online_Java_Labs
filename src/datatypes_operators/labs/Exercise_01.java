@@ -17,6 +17,20 @@ public class Exercise_01 {
     public static void main(String[] args) {
 
         // write code here
+        int a;
+        double b;
+        float c;
+        char d;
+
+        a = 10;
+        b = 10.0000;
+        c = 10;
+        d = 'e';
+
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
 
     }
 }

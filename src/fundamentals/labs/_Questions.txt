@@ -13,21 +13,31 @@ Answer the following questions:
     j. print the contents of a file?
     k. edit the contents of a file?
 
+    notes on command line however cannot start java on command line yet
+
 2.) Why do we use git and Github?
+to share respitories
 
 3.) What is the general flow of git?
 
+
 4.) What is the purpose of adding a remote to a local git repository?
 
+
 5.) How do you print a message to the console?
+sout
 
 6.) Where does a program begin its execution?
+from the main method
 
 7.) What is a code block and how do you create one?
+using {}
 
 8.) What is the idea of variable scope?
+code that be accessed outside the
 
 9.) What are semicolons used for?
+semi colons are separators that are used to terminate statements
 
 10.) What are lines of code indented? When should a line be indented?
 
