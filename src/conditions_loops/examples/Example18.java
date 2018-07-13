@@ -7,7 +7,7 @@ class Empty3 {
         int sum = 0;
 
         // sum the numbers through 5
-        for(i = 1; i <= 10000; sum += i++) ;
+        for(i = 1; i <= 5; sum += i++) ;
 
         System.out.println("Sum is " + sum);
     }

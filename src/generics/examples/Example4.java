@@ -13,8 +13,14 @@ class NumericFns2<T extends Number> {
     }
 
     // Return the reciprocal.
-    double reciprocal() {
-        return 1 / num.doubleValue();
+    int reciprocal() {
+        return 1 / num.intValue();
+    }
+
+    boolean absEqual(NumericFns2<?> ob) {
+        if(Math.abs(num.doubleValue()) == Math.abs(ob.num.doubleValue())) return true;
+
+        return false;
     }
 
     // Return the fractional component.
@@ -29,8 +35,7 @@ class NumericFns2<T extends Number> {
 class BoundsDemo {
     public static void main(String args[]) {
 
-        NumericFns2<Integer> iOb =
-                new NumericFns2<Integer>(5);
+        NumericFns2<Integer> iOb = new NumericFns2<>(5);        //java8 you dont need to re write integer in the <>
 
         System.out.println("Reciprocal of iOb is " +
                 iOb.reciprocal());
@@ -39,8 +44,8 @@ class BoundsDemo {
 
         System.out.println();
 
-        NumericFns2<Double> dOb =
-                new NumericFns2<Double>(5.25);
+        NumericFns2<Double> dOb = new NumericFns2<Double>(5.0);
+        System.out.println(dOb.absEqual(dOb));
 
         System.out.println("Reciprocal of dOb is " +
                 dOb.reciprocal());

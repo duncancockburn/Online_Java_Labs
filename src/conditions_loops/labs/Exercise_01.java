@@ -12,22 +12,44 @@ import java.util.Scanner;
  *      NOTE: We will be using the Scanner class to collect user input. This is demonstrated below.
  */
 
-public class Exercise_01 {
+public class Exercise_01{
+    public static void main(String[] args)
+        throws java.io.IOException{
 
-    public static void main(String[] args) {
+        System.out.println("Please enter a number between 1 and 1,000,000,000");
 
-        // create scanner
-        Scanner scanner = new Scanner(System.in);
-        // prompt user
-        System.out.print("Enter a number between 1 and 1,000,000,000 to determine whether it is odd or even: ");
-        // assign input to variable as int
-        int number = scanner.nextInt();
-        if(number % 2 == 0){
-            System.out.println("this is even");}
-        else {
-            System.out.println("this is odd");}
+        Scanner scan = new Scanner(System.in);
+        long inputNumber = scan.nextLong();
+
+
+        try{
+            if (inputNumber <=0){
+                throw new Exception("Please enter a possitive integer");
+            }
         }
+            catch (Exception e){
+                System.out.println("Please enter a possitive integer");
+            }
+
+
+        try{
+            if (inputNumber > 1000000000){
+                throw new SpecificException("Number is too big");
+            }
+        } catch (SpecificException e) {
+            System.out.println("Number is too big");
         }
+
+
+
+
+            if(inputNumber % 2 == 0 ){
+                System.out.println("even");}
+                else {
+                System.out.println("odd");
+            }
+    }
+}
 
 
 

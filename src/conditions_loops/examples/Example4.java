@@ -17,8 +17,10 @@ class Guess3 {
             System.out.print("...Sorry, you're ");
 
             // a nested if
-            if(ch < answer) System.out.println("too low");
-            else System.out.println("too high");
+            if(ch < answer)
+                System.out.println("too low");
+            else
+                System.out.println("too high");
         }
     }
 }

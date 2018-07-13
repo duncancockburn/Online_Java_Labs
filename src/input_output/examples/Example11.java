@@ -8,18 +8,30 @@ import java.io.InputStreamReader;
 
 class ReadChars {
     public static void main(String args[])
-            throws IOException
-    {
-        char c;
-        BufferedReader br = new
-                BufferedReader(new InputStreamReader(System.in));
+            throws IOException {
+
+
+        char c = 'a';
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        //input stream reads charaters and buffered reader is a wrapper class which means you can read line by line
 
         System.out.println("Enter characters, period to quit.");
 
+
         // read characters
+
         do {
-            c = (char) br.read();
-            System.out.println(c);
-        } while(c != '.');
+            try {
+                c = (char) br.read();
+                throw new CustomExcept();
+            }
+            catch (CustomExcept e) {
+                System.out.println(e.toString());
+            }}
+            while
+                (c != '.');
+
+
+
     }
 }

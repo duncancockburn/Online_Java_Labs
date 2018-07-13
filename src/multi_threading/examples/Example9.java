@@ -1,6 +1,8 @@
 package multi_threading.examples;
 
 // Use a synchronized block to control access to SumArray.
+
+
 class SumArray2 {
     private int sum;
 
@@ -12,6 +14,7 @@ class SumArray2 {
             System.out.println("Running total for " +
                     Thread.currentThread().getName() +
                     " is " + sum);
+
             try {
                 Thread.sleep(10); // allow task-switch
             }
@@ -26,13 +29,13 @@ class SumArray2 {
 class MyThread7 implements Runnable {
     Thread thrd;
     static SumArray2 sa = new SumArray2();
-    int a[];
+    int nums[];
     int answer;
 
     // Construct a new thread.
     MyThread7(String name, int nums[]) {
         thrd = new Thread(this, name);
-        a = nums;
+        this.nums = nums;
         thrd.start(); // start the thread
     }
 
@@ -44,7 +47,7 @@ class MyThread7 implements Runnable {
 
         // synchronize calls to sumArray()
         synchronized(sa) {
-            answer = sa.sumArray2(a);
+            answer = sa.sumArray2(nums);
         }
         System.out.println("Sum for " + thrd.getName() +
                 " is " + answer);
@@ -57,9 +60,11 @@ class MyThread7 implements Runnable {
 class Sync2 {
     public static void main(String args[]) {
         int a[] = {1, 2, 3, 4, 5};
+        int b[] = {1, 2, 3, 4, 6};
+
 
         MyThread7 mt1 = new MyThread7("Child #1", a);
-        MyThread7 mt2 = new MyThread7("Child #2", a);
+        MyThread7 mt2 = new MyThread7("Child #2", b);
 
         try {
             mt1.thrd.join();

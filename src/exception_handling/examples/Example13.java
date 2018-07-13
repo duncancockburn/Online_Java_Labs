@@ -2,19 +2,22 @@ package exception_handling.examples;
 
 // Use throws.
 class ThrowsDemo {
-    public static char prompt(String str) throws java.io.IOException {
 
-        System.out.print(str + ": ");
-        return (char) System.in.read();
+    public static int prompt(String str)
+            throws java.io.IOException {                //any method that called this method- telling other methods that
+        System.out.print(str + ": ");                   //there might be an exception associated
+        return ((char) System.in.read());
     }
 
+
     public static void main(String args[]) {
-        char ch;
+        int ch;
+
 
         try {
             ch = prompt("Enter a letter");
         }
-        catch(java.io.IOException exc) {
+        catch(Exception exc) {
             System.out.println("I/O exception occurred.");
             ch = 'X';
         }

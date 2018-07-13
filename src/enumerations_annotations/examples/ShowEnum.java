@@ -1,6 +1,6 @@
 package enumerations_annotations.examples;
 
-enum Tools {
+enum  Tools {
     SCREWDRIVER, WRENCH, HAMMER, PLIERS
 }
 

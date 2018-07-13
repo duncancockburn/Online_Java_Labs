@@ -1,5 +1,7 @@
 package conditions_loops.labs;
 
+import java.util.Scanner;
+
 /**
  * Conditions and Loops Exercise 11: Nested for loop
  *
@@ -20,4 +22,19 @@ package conditions_loops.labs;
  */
 
 public class Exercise_11 {
+    public static void main(String args[]){
+        Scanner keyboard = new Scanner(System.in);
+        int x=0, y=0;
+        System.out.print("Enter rows");
+        x = keyboard.nextInt();
+        System.out.print("Enter colums");
+        y = keyboard.nextInt();
+
+        for(int i=1; i<=x; i++){
+            for(int j=1; j<=y; j++){
+                System.out.print(" "+i*j);
+            }
+            System.out.println();
+        }
+    }
 }

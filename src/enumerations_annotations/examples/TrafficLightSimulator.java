@@ -4,6 +4,7 @@ package enumerations_annotations.examples;
 // stores the light delay in TrafficLightColor.
 
 // An enumeration of the colors of a traffic light.
+
 enum TrafficLightColor {
     RED(12000), GREEN(10000), YELLOW(2000);
 
@@ -13,8 +14,12 @@ enum TrafficLightColor {
         delay = d;
     }
 
-    int getDelay() { return delay; }
+    int getDelay() {
+        return delay; }
 }
+
+
+
 
 // A computerized traffic light.
 class TrafficLightSimulator implements Runnable {
@@ -91,10 +96,12 @@ class TrafficLightSimulator implements Runnable {
     }
 }
 
+
+
+
 class TrafficLightDemo {
     public static void main(String args[]) {
-        TrafficLightSimulator tl =
-                new TrafficLightSimulator(TrafficLightColor.GREEN);
+        TrafficLightSimulator tl = new TrafficLightSimulator(TrafficLightColor.GREEN);
 
         for(int i=0; i < 9; i++) {
             System.out.println(tl.getColor());

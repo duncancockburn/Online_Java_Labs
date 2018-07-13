@@ -7,7 +7,6 @@ class ArrayListExample {
 
         // create array list of String
         ArrayList<String> obj = new ArrayList<String>();
-
         // add items to the array list
         obj.add("Ryan");
         obj.add("Kim");

@@ -21,7 +21,7 @@ class Arrays {
         nums[8] = 287;
         nums[9] = 49;
 
-        min = max = 0;
+        min = max = nums[0];
         // check for min and max
         for(int i=0; i < 10; i++) {
             if(nums[i] < min)

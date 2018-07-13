@@ -1,5 +1,6 @@
 package conditions_loops.labs;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -12,29 +13,38 @@ import java.util.Scanner;
 
 public class Exercise_02 {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        // create scanner
-        System.out.print("Enter a number between 1 and 7");
-        String userinput = scanner.nextLine();
-        // prompt user
-        if( userinput == ("Monday")) {
-            System.out.println(1);
-        }
-            else if( userinput == "Tuesday");
-        {System.out.println(2);
-            else if( userinput == "Wednesday");
-            System.out.println(3);}
-            else {
-            System.out.println("Other");
+    public static void main(String[] args)
+        throws java.io.IOException {
+        int weekday;
+        System.out.println("What day of the week is it?");
+        Scanner scan = new Scanner(System.in);
+        weekday = scan.nextInt();
+
+        Exercise_02 object = new Exercise_02();
+        System.out.print("the weekday is" + object.method1(weekday));
+    }
 
 
+
+    String method1 (int weekday) {
+        if(weekday == 1) {
+            return ("Monday");
         }
+        else if (weekday== 2 ){
+            return ("Tuesday");}
+        else if (weekday== 3 ){
+            return ("Wednesday");}
+        else {
+            return ("Other");}
+    }
+}
+
+
+
+
 
         // assign input to variable as int
 
 
         // write completed code here
 
-    }
-}

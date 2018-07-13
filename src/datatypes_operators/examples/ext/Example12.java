@@ -76,7 +76,8 @@ class QDemo {
         // more errors on smallQ
         System.out.print("Contents of smallQ: ");
         for(i=0; i < 5; i++) {
-            ch = smallQ.get();
+            ch = smallQ.get()
+            ;
 
             if(ch != (char) 0) System.out.print(ch);
         }

@@ -7,7 +7,7 @@ class ArrayDemo {
 
         String[] whatever = new String[1];
 
-        double name1[] = new double[987];
+
 
         char i = 'A';
 
@@ -15,9 +15,6 @@ class ArrayDemo {
             alphabet[x] = i;
             System.out.print(alphabet[x]);
         }
-
-        String c = "c";
-        char ch = 'c';
 
 
 

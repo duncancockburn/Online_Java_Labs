@@ -7,17 +7,18 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+
+
 class AvgNums {
-    public static void main(String args[])
-            throws IOException
-    {
+    public static void main(String args[]) throws IOException {
         // create a BufferedReader using System.in
-        BufferedReader br = new
-                BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
         String str;
         int n;
         double sum = 0.0;
         double avg, t;
+
 
         System.out.print("How many numbers will you enter: ");
         str = br.readLine();
